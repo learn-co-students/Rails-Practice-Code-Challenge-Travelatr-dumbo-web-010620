@@ -9,6 +9,10 @@
   </head>
 
   <body>
+    <nav>
+      <ol>
+        <%= button_to 'Destinations', destinations_path, method: :get %>
+        <%= button_to 'Bloggers', bloggers_path, method: :get %> 
     <%= yield %>
   </body>
 </html>
