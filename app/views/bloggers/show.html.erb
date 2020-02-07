@@ -1,0 +1,12 @@
+<h1><%= @blogger.name %></h1>
+
+<h3>Age: <%= @blogger.age %></h3>
+
+<p>Bio: <%= @blogger.bio %></p>
+
+<% @blogger.posts.each do |p| %>
+    <li><%= link_to p.title, post_path(p) %> <%= p.likes %></li>
+<% end %>
+<%= button_to 'back', bloggers_path, method: :get %>
+<%= button_to "edit", edit_blogger_path, method: :get %>
+<%= button_to "destroy", blogger_path, method: :delete %>
